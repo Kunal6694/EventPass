@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="py-5 text-center bg-dark text-white rounded-4 shadow-lg mb-5 mt-3">
+    <h1 class="display-3 fw-bold">Elevate Your <span class="text-success">Experience</span></h1>
+    <p class="lead text-secondary px-5">The unified platform for booking tech workshops, corporate summits, and community meetups.</p>
+    <div class="mt-4">
+        <a href="/marketplace" class="btn btn-success btn-lg px-5 shadow-sm">Explore Marketplace</a>
+        <a href="/register" class="btn btn-outline-light btn-lg px-5 ms-3">Host Event</a>
+    </div>
+</div>
+
+<div class="row text-center mt-5">
+    <div class="col-md-4 mb-4">
+        <div class="p-4 bg-white rounded shadow-sm h-100">
+            <h4 class="fw-bold text-success">Verified Venues</h4>
+            <p class="text-muted small">All events are held at verified corporate and academic locations.</p>
+        </div>
+    </div>
+    <div class="col-md-4 mb-4">
+        <div class="p-4 bg-white rounded shadow-sm h-100">
+            <h4 class="fw-bold text-success">Instant Tickets</h4>
+            <p class="text-muted small">Receive your confirmed tickets instantly via your registered email.</p>
+        </div>
+    </div>
+    <div class="col-md-4 mb-4">
+        <div class="p-4 bg-white rounded shadow-sm h-100">
+            <h4 class="fw-bold text-success">Secure Portals</h4>
+            <p class="text-muted small">Dedicated dashboards for both attendees and event organizers.</p>
+        </div>
+    </div>
+</div>
+{% endblock %}

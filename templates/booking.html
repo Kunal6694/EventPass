@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="row justify-content-center mt-5">
+    <div class="col-md-6">
+        <div class="card shadow p-4 border-0">
+            <h3 class="fw-bold mb-2">Ticket Details</h3>
+            <h5 class="text-success mb-4">{{ event['title'] }}</h5>
+
+            <form method="POST">
+                <div class="row mb-3">
+                    <div class="col">
+                        <label class="form-label fw-bold small">Full Name</label>
+                        <input type="text" name="full_name" class="form-control" placeholder="Kunal Sharma" required>
+                    </div>
+                </div>
+
+                <div class="row mb-3">
+                    <div class="col-md-6">
+                        <label class="form-label fw-bold small">Email ID</label>
+                        <input type="email" name="email" class="form-control" placeholder="name@example.com" required>
+                    </div>
+                    <div class="col-md-6">
+                        <label class="form-label fw-bold small">Mobile Number</label>
+                        <input type="tel" name="mobile" class="form-control" placeholder="+91 XXXX" required>
+                    </div>
+                </div>
+
+                <div class="mb-4">
+                    <label class="form-label fw-bold small">Quantity</label>
+                    <input type="number" name="tickets" class="form-control" value="1" min="1" max="{{ event['available_seats'] }}" required>
+                    <div class="form-text">Available: {{ event['available_seats'] }} seats</div>
+                </div>
+
+                <hr class="my-4">
+                <button type="submit" class="btn btn-prakrit w-100 py-2 fw-bold shadow-sm">Confirm Booking</button>
+                <a href="/marketplace" class="btn btn-link w-100 mt-2 text-muted text-decoration-none">Cancel</a>
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock %}

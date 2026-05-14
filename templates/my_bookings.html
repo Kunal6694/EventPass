@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+{% block content %}
+<h2 class="mb-4 fw-bold">My <span class="text-success">Tickets</span></h2>
+{% if bookings %}
+<div class="table-responsive bg-white p-4 rounded shadow-sm">
+    <table class="table table-hover align-middle">
+        <thead class="table-light">
+            <tr>
+                <th>Event</th>
+                <th>Venue</th>
+                <th>Date</th>
+                <th>Quantity</th>
+                <th>Status</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for b in bookings %}
+            <tr>
+                <td class="fw-bold">{{ b.title }}</td>
+                <td>{{ b.location }}</td>
+                <td>{{ b.date }}</td>
+                <td>{{ b.tickets }} Ticket(s)</td>
+                <td><span class="badge bg-success">Confirmed</span></td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+{% else %}
+<div class="text-center py-5">
+    <p class="text-muted">No bookings found.</p>
+    <a href="/marketplace" class="btn btn-prakrit">Explore Events</a>
+</div>
+{% endif %}
+{% endblock %}

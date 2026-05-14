@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="row justify-content-center mt-5">
+    <div class="col-md-5">
+        <div class="card shadow p-4">
+            <h3 class="fw-bold mb-3 text-center text-success">Join EventPass</h3>
+            <form method="POST">
+                <div class="mb-3">
+                    <label class="form-label">Choose Username</label>
+                    <input type="text" name="username" class="form-control" required>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">Create Password</label>
+                    <input type="password" name="password" class="form-control" required>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">I want to join as a:</label>
+                    <select name="role" class="form-select">
+                        <option value="Attendee">Attendee (Browse & Book)</option>
+                        <option value="Organizer">Organizer (Create Events)</option>
+                    </select>
+                </div>
+                <button type="submit" class="btn btn-prakrit w-100 py-2">Create Account</button>
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock %}
